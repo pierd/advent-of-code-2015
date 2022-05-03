@@ -42,7 +42,7 @@ impl Action {
 }
 
 fn parse_pair(s: &str) -> (usize, usize) {
-    let mut nums = s.split(",");
+    let mut nums = s.split(',');
     (
         nums.next().unwrap().parse::<usize>().unwrap(),
         nums.next().unwrap().parse::<usize>().unwrap(),
@@ -95,7 +95,7 @@ fn apply_all_brightness(
 }
 
 fn sum_brightness(m: &[[usize; 1000]; 1000]) -> usize {
-    m.iter().flat_map(|row| row.iter()).map(|n| *n).sum()
+    m.iter().flat_map(|row| row.iter()).copied().sum()
 }
 
 fn solve(actions: &Vec<(Action, RangeInclusive<usize>, RangeInclusive<usize>)>) -> usize {
