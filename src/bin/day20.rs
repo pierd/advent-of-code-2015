@@ -54,6 +54,6 @@ fn main() {
         .find(|(_, s)| *s >= INPUT)
         .unwrap()
         .0;
-    println!("Part 1: {}", smallest);
+    println!("Part 1: {smallest}");
     println!("Part 2: {}", part2(INPUT).unwrap());
 }

@@ -99,13 +99,10 @@ mod tests {
 
     #[test]
     fn test_look_and_say() {
-        assert_eq!(look_and_say(&vec![1]), vec![1, 1]);
-        assert_eq!(look_and_say(&vec![1, 1]), vec![2, 1]);
-        assert_eq!(look_and_say(&vec![2, 1]), vec![1, 2, 1, 1]);
-        assert_eq!(look_and_say(&vec![1, 2, 1, 1]), vec![1, 1, 1, 2, 2, 1]);
-        assert_eq!(
-            look_and_say(&vec![1, 1, 1, 2, 2, 1]),
-            vec![3, 1, 2, 2, 1, 1]
-        );
+        assert_eq!(look_and_say(&[1]), vec![1, 1]);
+        assert_eq!(look_and_say(&[1, 1]), vec![2, 1]);
+        assert_eq!(look_and_say(&[2, 1]), vec![1, 2, 1, 1]);
+        assert_eq!(look_and_say(&[1, 2, 1, 1]), vec![1, 1, 1, 2, 2, 1]);
+        assert_eq!(look_and_say(&[1, 1, 1, 2, 2, 1]), vec![3, 1, 2, 2, 1, 1]);
     }
 }

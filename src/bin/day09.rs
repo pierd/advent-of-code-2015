@@ -80,8 +80,8 @@ fn main() {
     let distances = Distances::<'_>::from_str(include_str!("../../inputs/day09.txt"))
         .expect("input should parse correctly");
     let (shortest, longest) = distances.find_shortest_and_longest_path();
-    println!("Part 1: {}", shortest);
-    println!("Part 1: {}", longest);
+    println!("Part 1: {shortest}");
+    println!("Part 2: {longest}");
 }
 
 #[cfg(test)]

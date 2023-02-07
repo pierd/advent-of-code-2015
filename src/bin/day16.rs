@@ -88,12 +88,12 @@ fn main() {
         .expect("input should parse");
     for (sue_idx, sue_props) in &sues {
         if matcher.matches(sue_props) {
-            println!("Part 1: {}", sue_idx);
+            println!("Part 1: {sue_idx}");
         }
     }
     for (sue_idx, sue_props) in &sues {
         if matcher.matches_complex(sue_props) {
-            println!("Part 2: {}", sue_idx);
+            println!("Part 2: {sue_idx}");
         }
     }
 }

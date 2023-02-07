@@ -122,7 +122,7 @@ fn main() {
     let instrs = parse_input(include_str!("../../inputs/day07.txt")).expect("input should parse");
     let values = calculate(&instrs, "a");
     let wire_a = *values.get("a").expect("'a' should be evaluated");
-    println!("Part 1: {}", wire_a);
+    println!("Part 1: {wire_a}");
 
     let new_instrs: Vec<_> = instrs
         .iter()
@@ -145,7 +145,7 @@ fn main() {
 mod tests {
     use super::*;
 
-    const SAMPLE: &'static str = "123 -> x\n456 -> y\nx AND y -> d\nx OR y -> e\nx LSHIFT 2 -> f\ny RSHIFT 2 -> g\nNOT x -> h\nNOT y -> i";
+    const SAMPLE: &str = "123 -> x\n456 -> y\nx AND y -> d\nx OR y -> e\nx LSHIFT 2 -> f\ny RSHIFT 2 -> g\nNOT x -> h\nNOT y -> i";
 
     #[test]
     fn sample_parses() {

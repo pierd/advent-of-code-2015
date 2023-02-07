@@ -205,6 +205,6 @@ fn solve() -> (usize, usize) {
 
 fn main() {
     let (best, worst) = solve();
-    println!("Part 1: {}", best);
-    println!("Part 2: {}", worst);
+    println!("Part 1: {best}");
+    println!("Part 2: {worst}");
 }
